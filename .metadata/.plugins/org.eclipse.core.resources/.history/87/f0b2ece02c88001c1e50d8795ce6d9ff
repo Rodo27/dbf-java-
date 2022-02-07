@@ -1,0 +1,25 @@
+package com.bridgecobra.doa;
+import java.io.*;
+import com.linuxense.javadbf.*;
+
+import java.math.BigDecimal;
+
+
+import com.linuxense.javadbf.DBFReader;
+import com.linuxense.javadbf.DBFRow;
+import com.linuxense.javadbf.DBFUtils;
+
+
+public class Recibo {
+
+	
+	public static void main(String [] args) throws FileNotFoundException {
+		
+		
+	}
+	
+	
+}
+
+
+ 

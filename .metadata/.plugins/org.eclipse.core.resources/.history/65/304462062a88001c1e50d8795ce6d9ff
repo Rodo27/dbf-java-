@@ -1,0 +1,46 @@
+package com.bridgecobra.doa;
+import java.io.*;
+import com.linuxense.javadbf.*;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.math.BigDecimal;
+
+
+import com.linuxense.javadbf.DBFReader;
+import com.linuxense.javadbf.DBFRow;
+import com.linuxense.javadbf.DBFUtils;
+
+
+public class Recibo {
+
+	
+	public static void main(String [] args) {
+		
+		
+			DBFReader reader = null;
+			InputStream in = null;
+			File input = new File("src/test/recibo.dbf");
+			File memoFile = new File("src/test/recibo.dbt");
+			try {
+				in = new BufferedInputStream(new FileInputStream(input));
+				reader = new DBFReader(in);
+				reader.setMemoFile(memoFile);
+				Object[] rowObjects = null;
+				while ((rowObjects = reader.nextRecord()) != null) {
+					for (int i = 0; i < rowObjects.length; i++) {
+						Double dataNumber = (Double.parseDouble((String.valueOf(rowObjects[0]).trim())));
+						System.out.println(new BigDecimal(dataNumber).toPlainString());
+					}
+				}
+
+			} finally {
+				DBFUtils.close(reader);
+				DBFUtils.close(in);
+			}
+		
+		
+	}
+}

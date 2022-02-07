@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\bbc365\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2626470253.index
+2100048327.index

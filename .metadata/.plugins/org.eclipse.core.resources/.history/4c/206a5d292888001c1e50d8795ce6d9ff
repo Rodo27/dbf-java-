@@ -1,0 +1,8 @@
+package com.bridgecobra.doa;
+
+public class Recibo {
+
+	public static void main(String [] args) {
+		
+	}
+}

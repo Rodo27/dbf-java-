@@ -1,0 +1,12 @@
+package com.bridgecobra.doa;
+import java.io.*;
+import com.linuxense.javadbf.*;
+
+
+public class Recibo {
+
+	
+	public static void main(String [] args) {
+		
+	}
+}
